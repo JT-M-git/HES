@@ -2,7 +2,7 @@ import keras
 import numpy as np
 from PIL import Image
 from itertools import groupby
-image = Image.open("pic2.jpeg").convert("L")
+image = Image.open("calc1.jpg").convert("L")
 height = image.size[1]
 width = image.size[0]
 ratio = width / height
@@ -35,7 +35,7 @@ for x in range(0, num_of_elements):
 
 elements_array = np.array(elements_list)
 elements_array = elements_array.reshape(-1, 28, 28, 1)
-model = keras.models.load_model("model.h5")
+model = keras.models.load_model("pro.h5")
 elements_pred = model.predict(elements_array)
 elements_pred = np.argmax(elements_pred, axis=1)
 print(elements_pred)

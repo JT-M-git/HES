@@ -45,4 +45,4 @@ datagen = ImageDataGenerator(
         vertical_flip=False)  # randomly flip images
 
 model.fit_generator(datagen.flow(X_train,y_train, batch_size=60),epochs = 10,validation_data = (X_train,y_train), verbose = 1, steps_per_epoch=X_train.shape[0] // 60)
-model.save("modelexp.h5")
+model.save("pro1.h5")
